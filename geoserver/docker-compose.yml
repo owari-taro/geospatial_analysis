@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  geoserver:
+    image: docker.osgeo.org/geoserver:2.22.0
+    volumes:
+      - sample_geoserver:/opt/geoserver_data/
+
+    ports:
+      - '80:8080'
+
+volumes:
+  sample_geoserver:
